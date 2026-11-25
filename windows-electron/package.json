@@ -8,11 +8,8 @@
     "start": "electron .",
     "build:win": "electron-builder --win nsis"
   },
-  "dependencies": {
-    "electron-updater": "^6.6.2"
-  },
   "devDependencies": {
-    "electron": "^34.5.8",
+    "electron": "^34.0.0",
     "electron-builder": "^25.1.8"
   },
   "build": {
@@ -30,19 +27,13 @@
       "icon-512.png",
       "package.json"
     ],
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "Atida1214",
-        "repo": "nexus-releases",
-        "releaseType": "release"
-      }
-    ],
     "win": {
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "icon-512.png"
@@ -53,5 +44,8 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true
     }
+  },
+  "allowScripts": {
+    "electron@34.5.8": true
   }
 }
